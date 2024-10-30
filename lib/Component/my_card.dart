@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyCard extends StatelessWidget {
   final String title;
@@ -9,23 +10,27 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Theme.of(context).colorScheme.primary,
       elevation: 2,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.0),
+        borderRadius: BorderRadius.circular(15.0),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
             icon,
-            size: 50,
-            color: Colors.deepPurpleAccent, 
+            size: 60,
+            color: Theme.of(context).colorScheme.secondary, 
           ),
           const SizedBox(height: 10),
-          Center(
-            child: Text(
-              title,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.poppins(
+              fontSize: 17, 
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.background,
             ),
           ),
         ],

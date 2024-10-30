@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geopulse/Component/my_card.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CardPage extends StatefulWidget {
   const CardPage({super.key});
@@ -32,11 +33,15 @@ class _CardPageState extends State<CardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text(
           'Home Page',
-          style: TextStyle(
-            color: Theme.of(context).colorScheme.primary,
-          ),
+          style: GoogleFonts.poppins(
+            color: Theme.of(context).colorScheme.inversePrimary,
+          )
+          // style: TextStyle(
+          // ),
         ),
       ),
       body: Padding(

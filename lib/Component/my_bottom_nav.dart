@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geopulse/Component/my_card_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:motion_tab_bar/MotionTabBar.dart';
 import 'package:motion_tab_bar/MotionTabBarController.dart';
 
@@ -55,14 +56,14 @@ class _MyBottomNavState extends State<MyBottomNav> with TickerProviderStateMixin
         initialSelectedTab: "Home",
         tabSize: 50,
         tabBarHeight: 55,
-        textStyle: const TextStyle(
+        textStyle: GoogleFonts.poppins(
           fontSize: 12,
-          color: Colors.black,
+          color: Theme.of(context).colorScheme.primary,
           fontWeight: FontWeight.w500,
         ),
-        tabIconColor: Colors.deepPurpleAccent,
+        tabIconColor: Theme.of(context).colorScheme.primary,
         tabIconSelectedColor: Colors.white,
-        tabSelectedColor: Colors.deepPurpleAccent,
+        tabSelectedColor: Theme.of(context).colorScheme.primary,
         tabBarColor: Colors.white,
         onTabItemSelected: _onTabSelected,
       ),

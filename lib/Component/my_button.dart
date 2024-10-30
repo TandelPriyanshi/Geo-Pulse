@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyButton extends StatelessWidget {
   final Function()? ontap;
@@ -16,19 +17,19 @@ class MyButton extends StatelessWidget {
     return GestureDetector(
       onTap: ontap,
       child: Container(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(15),
         margin: const EdgeInsets.symmetric(horizontal: 25),
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
-          borderRadius: BorderRadius.circular(10)
+          borderRadius: BorderRadius.circular(20)
         ),
         child: Center(
           child: Text(
             text,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               fontWeight: FontWeight.bold,
               fontSize: 18,
-              color: Theme.of(context).colorScheme.inversePrimary
+              color: Colors.white,
             ),
           ),
         ),
